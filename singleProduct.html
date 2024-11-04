@@ -7,24 +7,24 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="responsive.css" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-  <!-- bootstrap cdn -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    crossorigin="anonymous"
-  />
-  <!-- google font -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter&display=swap"
-    rel="stylesheet"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter&display=swap"
+      rel="stylesheet"
+    />
     <title>singleProduct</title>
   </head>
   <body>
@@ -89,10 +89,15 @@
       <nav class="nav-container">
         <ul class="nav-links menu">
           <!-- Products List Dropdown -->
-          <li class="menu-item" onmouseenter="toggleDropdown(true)" onmouseleave="toggleDropdown(false)">
+          <li
+            class="menu-item"
+            onmouseenter="toggleDropdown(true)"
+            onmouseleave="toggleDropdown(false)"
+          >
             <a href="/shop.html" class="menu-link">
               Products List
-              <span class="dropdown-icon">&#9660;</span> <!-- Down arrow icon -->
+              <span class="dropdown-icon">&#9660;</span>
+              <!-- Down arrow icon -->
             </a>
             <div class="nav-dropdown" id="productDropdown">
               <div class="dropdown-content" id="dropdownContent"></div>
@@ -128,7 +133,6 @@
         </div>
       </nav>
     </div>
-
 
     <!-- single product page code start -->
     <div class="singleProduct-container">
@@ -336,8 +340,12 @@
         <!-- Product Description Tabs -->
         <div class="product-desc-tabs">
           <div class="product-info-tabs" id="productInfoTabs">
-            <button class="description-btn active" data-set="Description">Description</button>
-            <button class="more-info-btn"  data-set="More Info">More Info</button>
+            <button class="description-btn active" data-set="Description">
+              Description
+            </button>
+            <button class="more-info-btn" data-set="More Info">
+              More Info
+            </button>
             <button class="tags-btn" data-set="Tags">Tags</button>
           </div>
 
@@ -371,6 +379,157 @@
               </div>
             </div>
             <!-- Repeat similar blocks for other related products -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer top newsletter -->
+    <div class="footer-top-container">
+      <div class="main-container">
+        <div class="grid-container">
+          <div class="content">
+            <h1 class="heading">
+              Sign up for exclusive promotions on
+              <br />
+              our packaging products.
+            </h1>
+          </div>
+
+          <div class="newslatter-mail-input">
+            <input class="input" type="text" placeholder="Enter Name" />
+            <input class="input" type="email" placeholder="Enter Email" />
+            <!-- <button class="">Notify Me</button> -->
+            <input type="button" value="Notify Me" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-container">
+      <div class="main-container">
+        <div class="footer-content">
+          <div class="footer-data">
+            <div class="footer-col">
+              <h1 class="footer-logo">VALUE BOX PRINTING</h1>
+              <div class="company-info">
+                <p>
+                  valueBox is your go-to for custom box printing. We create
+                  packaging that reflects your brand, combining quality and
+                  design to bring your ideas to life.
+                </p>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <div class="hd">Quick Links</div>
+              <div class="links">
+                <ul>
+                  <li>
+                    <a href="/"><i class="fas fa-arrow-right"></i> Home</a>
+                  </li>
+                  <li>
+                    <a href="/shop.html"
+                      ><i class="fas fa-arrow-right"></i> Shop</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/about.html"
+                      ><i class="fas fa-arrow-right"></i> About us</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/contact.html"
+                      ><i class="fas fa-arrow-right"></i> Contact us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <div class="hd">Company</div>
+              <div class="links">
+                <ul>
+                  <li>
+                    <a href="/delivery-info"
+                      ><i class="fas fa-arrow-right"></i> Delivery
+                      Information</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/privacy-policy"
+                      ><i class="fas fa-arrow-right"></i> Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/term-conditions"
+                      ><i class="fas fa-arrow-right"></i> Terms & Conditions</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/support"
+                      ><i class="fas fa-arrow-right"></i> Support Center</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <div class="hd">Social Links</div>
+              <div class="links">
+                <ul>
+                  <li>
+                    <a><i class="fab fa-facebook"></i> Facebook</a>
+                  </li>
+                  <li>
+                    <a><i class="fab fa-instagram"></i> Instagram</a>
+                  </li>
+                  <li>
+                    <a><i class="fab fa-tiktok"></i> Tiktok</a>
+                  </li>
+                  <li>
+                    <a><i class="fab fa-linkedin"></i> Linkedin</a>
+                  </li>
+                  <li>
+                    <a><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <div class="contact-title">Contact Us</div>
+              <div class="contact-info">
+                <h1>
+                  <i class="fas fa-location-dot"></i> <span>Address:</span> 5171
+                  W Campbell Ave undefined Kent, Utah 53127 Lahore
+                </h1>
+                <h1>
+                  <i class="fas fa-headphones-simple"></i>
+                  <span>Call Us:</span> (+91) - 540-025-124553
+                </h1>
+                <h1>
+                  <i class="fas fa-paper-plane"></i>
+                  <span>Email:</span> info@valueBoxprinting.com
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Bottom Section -->
+    <div class="copy-right-contianer">
+      <div class="main-container">
+        <div class="copy-right-content">
+          <div class="copy-tagline">
+            <p class="">© 2024 ValueBox. All Rights Reserved</p>
+          </div>
+          <div class="payment-icons">
+            <img src="/images/payment.png" alt="" />
           </div>
         </div>
       </div>
@@ -419,13 +578,15 @@
           } else {
             renderRelatedProducts(matchingProducts); // Pass the correct variable
           }
-                 
-          // Render product details
-          const singleProductImage = document.querySelector('.single-product-image');
-singleProductImage.innerHTML = ''; // Clear the container
 
-// Display the first image as the initial large image
-let assumeImage = `
+          // Render product details
+          const singleProductImage = document.querySelector(
+            ".single-product-image"
+          );
+          singleProductImage.innerHTML = ""; // Clear the container
+
+          // Display the first image as the initial large image
+          let assumeImage = `
   <div class="large-image">
     <img
       src="${product.images[0]}"
@@ -434,7 +595,9 @@ let assumeImage = `
     />
   </div>
   <div class="small-images">
-    ${product.images.map((val) => `
+    ${product.images
+      .map(
+        (val) => `
       <div class="small-image-box">
         <img
           src="${val}"
@@ -442,26 +605,27 @@ let assumeImage = `
           class="small-image"
         />
       </div>
-    `).join('')}
+    `
+      )
+      .join("")}
   </div>
 `;
 
-// Set the HTML content
-singleProductImage.innerHTML = assumeImage;
+          // Set the HTML content
+          singleProductImage.innerHTML = assumeImage;
 
-// Add event listeners to each small image
-const smallImages = document.querySelectorAll('.small-image');
-const largeImage = document.getElementById('productImage');
+          // Add event listeners to each small image
+          const smallImages = document.querySelectorAll(".small-image");
+          const largeImage = document.getElementById("productImage");
 
-smallImages.forEach((img) => {
-  img.addEventListener('click', () => {
-    largeImage.src = img.src;
-  });
-});
+          smallImages.forEach((img) => {
+            img.addEventListener("click", () => {
+              largeImage.src = img.src;
+            });
+          });
 
-
-
-          document.getElementById("productBreadcrumbname").innerHTML = product.name 
+          document.getElementById("productBreadcrumbname").innerHTML =
+            product.name;
           // document.getElementById("productImage").src = product.images[0];
           document.getElementById("productName").textContent = product.name;
           document.getElementById("productDescription").textContent =
@@ -515,29 +679,26 @@ smallImages.forEach((img) => {
           descriptionContent.style.display = "block";
           moreInfo.style.display = "none";
           productTags.style.display = "none";
-          document.querySelector('.description-btn').classList.add('active')
-          document.querySelector('.more-info-btn').classList.remove('active')
-          document.querySelector('.tags-btn').classList.remove('active')
-
+          document.querySelector(".description-btn").classList.add("active");
+          document.querySelector(".more-info-btn").classList.remove("active");
+          document.querySelector(".tags-btn").classList.remove("active");
         }
         if (clickedTab === "More Info") {
           descriptionContent.style.display = "none";
           moreInfo.style.display = "block";
           productTags.style.display = "none";
-          document.querySelector('.description-btn').classList.remove('active')
-          document.querySelector('.more-info-btn').classList.add('active')
-          document.querySelector('.tags-btn').classList.remove('active')
-
+          document.querySelector(".description-btn").classList.remove("active");
+          document.querySelector(".more-info-btn").classList.add("active");
+          document.querySelector(".tags-btn").classList.remove("active");
         }
         if (clickedTab === "Tags") {
           descriptionContent.style.display = "none";
           moreInfo.style.display = "none";
           productTags.style.display = "block";
-          document.querySelector('.description-btn').classList.remove('active')
+          document.querySelector(".description-btn").classList.remove("active");
 
-          document.querySelector('.tags-btn').classList.add('active')
-          document.querySelector('.more-info-btn').classList.remove('active')
-
+          document.querySelector(".tags-btn").classList.add("active");
+          document.querySelector(".more-info-btn").classList.remove("active");
         }
       });
 
@@ -553,7 +714,9 @@ smallImages.forEach((img) => {
         const cluster = relatedProducts
           .slice(0, 4)
           .map((val) => {
-            return `<a href="/singleproduct.html?id=${val.id}" style="color:black;">
+            return `<a href="/singleproduct.html?id=${
+              val.id
+            }" style="color:black;">
       <div class="product-card">
         <img src="${val.img}" alt="Related Product 1" />
         <h1 class="product-name">${val.name}</h1>

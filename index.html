@@ -113,11 +113,6 @@
             </div>
             <div class="hamburger-menu">
               <i id="hamburgerIcon" class="fas fa-bars"></i>
-              <div id="menu hamburgerIcon" onclick="onClickMenu()">
-                <div id="bar1" class="bar"></div>
-                <div id="bar2" class="bar"></div>
-                <div id="bar3" class="bar"></div>
-              </div>
             </div>
           </div>
         </div>
@@ -128,10 +123,15 @@
       <nav class="nav-container">
         <ul class="nav-links menu">
           <!-- Products List Dropdown -->
-          <li class="menu-item" onmouseenter="toggleDropdown(true)" onmouseleave="toggleDropdown(false)">
+          <li
+            class="menu-item"
+            onmouseenter="toggleDropdown(true)"
+            onmouseleave="toggleDropdown(false)"
+          >
             <a href="/shop.html" class="menu-link">
               Products List
-              <span class="dropdown-icon">&#9660;</span> <!-- Down arrow icon -->
+              <span class="dropdown-icon">&#9660;</span>
+              <!-- Down arrow icon -->
             </a>
             <div class="nav-dropdown" id="productDropdown">
               <div class="dropdown-content" id="dropdownContent"></div>
@@ -453,8 +453,12 @@
               <div class="category-image">
                 <img src="/images/castom boxes.jpg" alt="Cosmetics & Beauty" />
               </div>
-              <a href="#" class="category-link" onclick="selectCategoryPath(event, 'COSMETICS & BEAUTY')">COSMETICS & BEAUTY</a>
-              
+              <a
+                href="/shop.html"
+                class="category-link"
+                data-category="Cosmetics & Beauty"
+                >COSMETICS & BEAUTY</a
+              >
             </div>
 
             <!-- Category Item 2 -->
@@ -465,7 +469,7 @@
                   alt="Software & Electronic"
                 />
               </div>
-              <a href="/category/software-electronic" class="category-name"
+              <a href="/shop.html" class="category-name"
                 >Software & Electronic</a
               >
             </div>
@@ -475,18 +479,14 @@
               <div class="category-image">
                 <img src="/images/soap boxes.jpg" alt="Soap Boxes" />
               </div>
-              <a href="/category/soap-boxes" class="category-name"
-                >Soap Boxes</a
-              >
+              <a href="/shop.html" class="category-name">Soap Boxes</a>
             </div>
 
             <div class="swiper-slide category-item">
               <div class="category-image">
                 <img src="/images/wendow boxes.jpg" alt="Display Packaging" />
               </div>
-              <a href="/category/display-packaging" class="category-name"
-                >Display Packaging</a
-              >
+              <a href="/shop.html" class="category-name">Display Packaging</a>
             </div>
 
             <div class="swiper-slide category-item">
@@ -497,9 +497,7 @@
                   class=""
                 />
               </div>
-              <a href="/category/display-packaging" class=""
-                >Display Packaging</a
-              >
+              <a href="/shop.html" class="">Popup Display Boxes</a>
             </div>
             <div class="swiper-slide category-item">
               <div class="category-image">
@@ -509,9 +507,7 @@
                   class=""
                 />
               </div>
-              <a href="/category/display-packaging" class=""
-                >Display Packaging</a
-              >
+              <a href="/shop.html" class="">Retail Packaging Boxes</a>
             </div>
 
             <!-- Additional items as needed -->
@@ -968,12 +964,12 @@
                     >
                   </li>
                   <li>
-                    <a href="/privacy-policy"
+                    <a href="/privacyPolicy.html"
                       ><i class="fas fa-arrow-right"></i> Privacy Policy</a
                     >
                   </li>
                   <li>
-                    <a href="/term-conditions"
+                    <a href="/termsConditions.html"
                       ><i class="fas fa-arrow-right"></i> Terms & Conditions</a
                     >
                   </li>
@@ -1052,22 +1048,23 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper(".swiper-container", {
-        // slidesPerView: 5,
         spaceBetween: 20,
-        loop: false,
-        // autoplay: {
-        //   delay: 1500,
-        //   disableOnInteraction: false,
-        // },
+        loop: true,
+        autoplay: {
+          delay: 1500,
+          disableOnInteraction: false,
+        },
         breakpoints: {
           1400: { slidesPerView: 5 },
           1200: { slidesPerView: 4 },
           560: { slidesPerView: 2 },
-          200: { selidePerview: 2 },
+          200: { slidesPerView: 2 }, // Corrected "selidePerview" to "slidesPerView"
         },
       });
     </script>
     <script src="products.js"></script>
     <script src="script.js"></script>
+
+    <script></script>
   </body>
 </html>

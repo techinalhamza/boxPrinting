@@ -194,4 +194,10 @@ ul#moreInfoContent li span {
   .product-info {
     width: 100%;
   }
+  .listing-overlay h1 {
+    font-size: 2rem;
+  }
+  .product-info-tabs button {
+    padding: 10px 10px;
+  }
 }

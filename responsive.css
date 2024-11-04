@@ -78,21 +78,27 @@
   }
   .form-row:nth-child(2) {
     flex-direction: column;
-margin-top: 8px;
-}
-.form-row:nth-child(2) .field label {
-  display: none;
-}
-.single-product-image img {
-height: auto !important;
-}
-.product-name{
-font-size: 13px;
-}
-.product-card p {
-  font-size: 12px;
-}
-.coating-title{
-  font-size: 13px;
-}
+    margin-top: 8px;
+  }
+  .form-row:nth-child(2) .field label {
+    display: none;
+  }
+  .single-product-image img {
+    height: auto !important;
+  }
+  .product-name {
+    font-size: 13px;
+  }
+  .product-card p {
+    font-size: 12px;
+  }
+  .coating-title {
+    font-size: 13px;
+  }
+  .product-title-bar .title {
+    font-size: 24px;
+  }
+  .header-section h1 {
+    font-size: 24px;
+  }
 }

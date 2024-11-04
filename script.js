@@ -4,7 +4,10 @@ const navLink = document.querySelector(".nav-links");
 hamburger.addEventListener("click", () => {
   navLink.classList.toggle("mobile-nav");
 });
-
+function onClickMenu() {
+  document.getElementById("menu").classList.toggle("icon");
+  document.getElementById("ul").classList.toggle("change");
+}
 // function toggleDropdown(open) {
 //   const dropdown = document.getElementById("productDropdown");
 //   if (open) {
@@ -19,7 +22,7 @@ function mapCategories(data) {
   const dropdownContent = document.getElementById("dropdownContent");
   dropdownContent.innerHTML = ""; // Clear existing content
 
-  data.forEach(category => {
+  data.forEach((category) => {
     // Create a container for each category
     const categoryDiv = document.createElement("div");
     categoryDiv.classList.add("category");
@@ -42,7 +45,7 @@ function mapCategories(data) {
 function mapProducts(products) {
   const productUl = document.createElement("ul");
 
-  products.forEach(product => {
+  products.forEach((product) => {
     const productLi = document.createElement("li");
     productLi.classList.add("product-item");
 
@@ -69,7 +72,7 @@ function toggleDropdown(open) {
 }
 
 // Initialize Mega Menu with Categories and Products
-document.addEventListener("DOMContentLoaded",async function() {
+document.addEventListener("DOMContentLoaded", async function () {
   try {
     const response = await fetch("products.json");
 
@@ -83,7 +86,6 @@ document.addEventListener("DOMContentLoaded",async function() {
     products = productsData;
 
     mapCategories(productsData);
-
   } catch (error) {
     console.error("Error fetching products:", error);
   }
@@ -280,7 +282,6 @@ if (
   const newArrivalTab = document.getElementById("newArrivalLink");
   const topSellerTab = document.getElementById("topSellerLink");
   document.addEventListener("DOMContentLoaded", () => {
-
     // const bestSellerTab = document.getElementById("bestSellerTab");
     // const newArrivalTab = document.getElementById("newArrivalTab");
     // const topSellerTab = document.getElementById("topSellerTab");
@@ -407,5 +408,272 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     });
+  }
+});
+// shop page
+
+async function fetchProducts() {
+  const response = await fetch("products.json");
+  const productsData = await response.json();
+
+  // Check if there's a search query in the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const searchQuery = urlParams.get("search");
+
+  if (searchQuery) {
+    // Filter products based on the search query
+    const filteredProductsData = filterProductsData(productsData, searchQuery);
+    renderProductsOnShop(filteredProductsData); // Render only filtered products
+  } else {
+    renderProductsOnShop(productsData); // Render all products if no search query
+  }
+}
+
+document.querySelectorAll(".category-link").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    const category = link.getAttribute("data-category");
+    // Redirect to shop.html with category as URL parameter
+    window.location.href = `/shop.html?category=${encodeURIComponent(
+      category
+    )}`;
+  });
+});
+
+// Function to filter products based on the search query
+function filterProductsData(productsData, searchQuery) {
+  return productsData
+    .map((category) => ({
+      ...category,
+      items: category.items.filter((product) =>
+        product.name.toLowerCase().includes(searchQuery.toLowerCase())
+      ),
+    }))
+    .filter((category) => category.items.length > 0); // Remove categories without matching products
+}
+
+// Function to filter products directly on shop.html without redirecting
+function filterProductsOnShop(searchQuery) {
+  fetch("products.json")
+    .then((response) => response.json())
+    .then((productsData) => {
+      const filteredProductsData = filterProductsData(
+        productsData,
+        searchQuery
+      );
+      renderProductsOnShop(filteredProductsData);
+    })
+    .catch((error) => console.error("Error fetching products:", error));
+}
+
+// Function to retrieve category from URL and filter products
+document.addEventListener("DOMContentLoaded", () => {
+  // Capture the category from URL parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  const category = urlParams.get("category");
+
+  if (category) {
+    console.log("Selected Category:", category); // Debugging
+    filterByCategory(category); // Filter and display products for the selected category
+  } else {
+    renderProductsOnShop(products); // Display all products if no category is selected
+  }
+});
+
+// Function to render filtered products by category
+function filterByCategory(matchingCategoryProducts) {
+  if (matchingCategoryProducts && matchingCategoryProducts.length > 0) {
+    console.log("Matching products found:", matchingCategoryProducts);
+    renderProductsOnShop(matchingCategoryProducts);
+  } else {
+    console.error("No matching products found.");
+  }
+}
+
+// Function to render products on the shop page
+
+function renderProductsOnShop(products) {
+  const listingProducts = document.getElementById("listingProducts");
+  const productCount = document.getElementById("productCount");
+
+  if (!listingProducts) {
+    console.error("Element with id 'listingProducts' not found!");
+    return;
+  }
+
+  const totalProductCount = products.reduce(
+    (acc, val) => acc + val.items.length,
+    0
+  );
+  productCount.innerHTML = ` ${totalProductCount}`; // Set the total count
+
+  listingProducts.innerHTML = ""; // Clear existing content
+
+  const cluster = products
+    .flatMap((category) =>
+      category.items.map(
+        (product) => `
+          <a href="/singleproduct.html?id=${product.id}" class="product-link">
+            <div class="product-card">
+              <div class="product-content">
+                <div class="product-image-bx">
+                  <img src="${product.img}" alt="${
+          product.name
+        }" class="product-image"/>
+                </div>
+                <div class="product-info">
+                  <h1 class="product-name">${product.name}</h1>
+                  <p class="product-description">${product.desc.substr(
+                    0,
+                    50
+                  )}...</p>
+                </div>
+                <div class="product-btn">
+                  <div class="rating">★★★★☆</div>
+                  <button class="buy-now-btn">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </a>
+        `
+      )
+    )
+    .join("");
+
+  listingProducts.innerHTML = cluster;
+}
+
+// Attach the dropdown event listener to filter products by category
+document.getElementById("categoryDropdown").addEventListener("click", (e) => {
+  e.preventDefault(); // Prevent default link behavior
+
+  const filteredCategory = e.target.getAttribute("data-category");
+  if (!filteredCategory) return;
+
+  console.log("Selected Category:", filteredCategory);
+
+  const matchingCategoryProducts = products
+    .map((category) => {
+      console.log("Processing Category:", category.category); // Log each category for debugging
+      return {
+        ...category,
+        items: category.items.filter((product) => {
+          if (product.cat) {
+            // Use `product.cat` instead of `product.category`
+            console.log(
+              `Checking product "${product.name}" with category "${product.cat}"`
+            ); // Log product details for debugging
+            return (
+              product.cat.trim().toLowerCase() ===
+              filteredCategory.trim().toLowerCase()
+            );
+          }
+          return false;
+        }),
+      };
+    })
+    .filter((category) => category.items.length > 0);
+
+  // Call filterByCategory to check filtered products
+  filterByCategory(matchingCategoryProducts);
+});
+
+// // filtered products by category
+// function filterByCategory(matchingCategoryProducts) {
+//   if (
+//     matchingCategoryProducts !== null ||
+//     matchingCategoryProducts !== undefined ||
+//     matchingCategoryProducts !== ""
+//   ) {
+//     renderProductsOnShop(matchingCategoryProducts);
+//   }
+// }
+// // Function to render products on the shop page
+// function renderProductsOnShop(products) {
+//   const listingProducts = document.getElementById("listingProducts");
+//   const productCount = document.getElementById("productCount");
+//   const categoryDropdown = document.getElementById("categoryDropdown");
+
+//   categoryDropdown.addEventListener("click", (e) => {
+//     e.preventDefault(); // Prevent default link behavior
+
+//     const filteredCategory = e.target.getAttribute("data-category");
+//     if (!filteredCategory) return; // Exit if no category is selected
+
+//     console.log("Selected Category:", filteredCategory); // Log selected category for debugging
+
+//     // Filter products based on the selected category, with case-insensitive matching
+//     const matchingCategoryProducts = products
+//       .map((category) => ({
+//         ...category,
+//         items: category.items.filter((product) => {
+//           if (product.category) {
+//             console.log("Product Category:", product.category); // Log product category for debugging
+//             return (
+//               product.category.trim().toLowerCase() ===
+//               filteredCategory.trim().toLowerCase()
+//             );
+//           }
+//           return false; // Skip products without a category
+//         }),
+//       }))
+//       .filter((category) => category.items.length > 0);
+
+//     // Call filterByCategory to check filtered products
+//     filterByCategory(matchingCategoryProducts);
+//   });
+//   if (!listingProducts) {
+//     console.error("Element with id 'listingProducts' not found!");
+//     return;
+//   }
+
+//   // Calculate the total count of all displayed products
+//   const totalProductCount = products.reduce(
+//     (acc, val) => acc + val.items.length,
+//     0
+//   );
+//   productCount.innerHTML = ` ${totalProductCount}`; // Set the total count
+
+//   listingProducts.innerHTML = ""; // Clear existing content
+
+//   // Generate HTML for all products
+//   const cluster = products
+//     .flatMap((category) =>
+//       category.items.map(
+//         (product) => `
+//       <a href="/singleproduct.html?id=${product.id}" class="product-link">
+//         <div class="product-card">
+//           <div class="product-content">
+//             <div class="product-image-bx">
+//               <img src="${product.img}" alt="${
+//           product.name
+//         }" class="product-image"/>
+//             </div>
+//             <div class="product-info">
+//               <h1 class="product-name">${product.name}</h1>
+//               <p class="product-description">${product.desc.substr(
+//                 0,
+//                 50
+//               )}...</p>
+//             </div>
+//             <div class="product-btn">
+//               <div class="rating">★★★★☆</div>
+//               <button class="buy-now-btn">Buy Now</button>
+//             </div>
+//           </div>
+//         </div>
+//       </a>
+//     `
+//       )
+//     )
+//     .join(""); // Join to create a single string for innerHTML
+
+//   listingProducts.innerHTML = cluster; // Set the HTML structure to the listingProducts element
+// }
+
+// Call fetchProducts on DOM load to populate products on shop.html
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.location.pathname.includes("shop.html")) {
+    fetchProducts();
   }
 });

@@ -27,7 +27,46 @@
     />
     <title>Shop Page</title>
   </head>
+  <style>
+    .listing-banner {
+      background-image: url("/images/contactus-banner.jpg");
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
 
+    .listing-overlay {
+      background: rgba(0, 0, 0, 0.45);
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 6rem;
+    }
+    .listing-overlay h1 {
+      font-size: 4rem;
+      color: #fff;
+    }
+    .page-content {
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .page-content h1 {
+      font-size: 4rem;
+      text-align: center;
+    }
+    @media (max-width: 786px) {
+      .listing-overlay {
+        padding: 4rem 0;
+      }
+      .listing-overlay h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
   <body>
     <header>
       <div class="main-container">
@@ -84,7 +123,6 @@
         </div>
       </div>
     </header>
-
     <!-- Navigation Bar -->
     <div class="main-container">
       <nav class="nav-container">
@@ -134,84 +172,16 @@
         </div>
       </nav>
     </div>
-    <!-- shop page -->
-    <div class="shop-main-container">
-      <div class="listing-us-breadcrumb">
+    <div class="">
+      <div class="listing-banner">
         <div class="listing-overlay">
-          <h1 class="listing-title">All Listing</h1>
+          <h1 class="banner-title">Delivery Info</h1>
         </div>
       </div>
-      <div class="main-container">
-        <div class="products-topbar">
-          <div class="product-result">
-            <h3 class="">
-              Showing results for
-              <span id="productCount">20</span>
-              products
-            </h3>
-          </div>
-          <div class="dropdown">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Filter by Category
-            </button>
-            <ul class="dropdown-menu" id="categoryDropdown">
-              <li>
-                <a
-                  class="dropdown-item"
-                  href="#"
-                  data-category="Cosmetics & Beauty"
-                  >Cosmetics & Beauty</a
-                >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item"
-                  href="#"
-                  data-category="Retail Packaging Boxes"
-                  >Retail Packaging Boxes</a
-                >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item"
-                  href="#"
-                  data-category="Display Packaging"
-                  >Display Packaging</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" href="#" data-category="Die Cut Boxes"
-                  >Die Cut Boxes</a
-                >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item"
-                  href="#"
-                  data-category="Software & Electronic"
-                  >Software & Electronic</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item" href="#" data-category="Box By Style"
-                  >Box By Style</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- Product Lists -->
-        <div id="product-list">
-          <div class="all-product-container" id="listingProducts">
-            <!-- Loop through products here -->
 
-            <!-- Repeat similar blocks for other products -->
-          </div>
+      <div class="main-container">
+        <div class="page-content">
+          <h1>COMING SOON</h1>
         </div>
       </div>
     </div>
@@ -285,23 +255,23 @@
               <div class="links">
                 <ul>
                   <li>
-                    <a href="/delivery-info"
+                    <a href="/deliveryInfo.html"
                       ><i class="fas fa-arrow-right"></i> Delivery
                       Information</a
                     >
                   </li>
                   <li>
-                    <a href="/privacy-policy"
+                    <a href="/privacyPolicy.html"
                       ><i class="fas fa-arrow-right"></i> Privacy Policy</a
                     >
                   </li>
                   <li>
-                    <a href="/term-conditions"
+                    <a href="termsConditions.html"
                       ><i class="fas fa-arrow-right"></i> Terms & Conditions</a
                     >
                   </li>
                   <li>
-                    <a href="/support"
+                    <a href="/support.html"
                       ><i class="fas fa-arrow-right"></i> Support Center</a
                     >
                   </li>
@@ -366,13 +336,6 @@
         </div>
       </div>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <!-- <script src="products.js"></script> -->
-    <!-- <script src="shop.js"></script> -->
     <script src="script.js"></script>
   </body>
 </html>
