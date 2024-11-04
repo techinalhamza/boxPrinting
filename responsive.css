@@ -1,0 +1,98 @@
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .nav-discount-tagline {
+    display: none !important;
+  }
+  .nav-links {
+    margin: auto;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 786px) {
+  header {
+    padding: 0px 5px;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav-links {
+    /* display: none !important; */
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 88%;
+    height: 100vh !important;
+    background: #fff;
+    z-index: 11111 !important;
+    margin: 0 !important;
+    padding: 2rem !important;
+    box-shadow: 0px 1px 4px 0px #000;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: 0.5s ease-in-out;
+  }
+  .mobile-nav {
+    left: 0;
+  }
+  /* .mblnav {
+    flex-direction: column !important;
+    height: 100%;
+    margin-top: 6rem;
+    margin-left: 1.5rem;
+  } */
+  .nav-discount-tagline {
+    margin: auto;
+  }
+  .header-search-bar {
+    display: none !important;
+  }
+  .nav-phone {
+    display: none !important;
+  }
+  .nav-account p {
+    display: none !important;
+  }
+  .nav-divider {
+    display: none !important;
+  }
+  .nav-contact-info svg {
+    font-size: 1.5rem !important;
+  }
+  nav {
+    margin-top: 5rem !important;
+    padding: 5px !important;
+    /* position: relative; */
+    /* height: 80vh !important; */
+    margin-bottom: 5px;
+  }
+  .nav-discount-tagline p {
+    font-size: 11px;
+  }
+  .logo img {
+    width: 5rem !important;
+  }
+  .main-container {
+    /* padding: 0 10px !important; */
+  }
+  .form-row:nth-child(2) {
+    flex-direction: column;
+margin-top: 8px;
+}
+.form-row:nth-child(2) .field label {
+  display: none;
+}
+.single-product-image img {
+height: auto !important;
+}
+.product-name{
+font-size: 13px;
+}
+.product-card p {
+  font-size: 12px;
+}
+.coating-title{
+  font-size: 13px;
+}
+}

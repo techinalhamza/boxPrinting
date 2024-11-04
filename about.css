@@ -1,0 +1,153 @@
+/* styles.css */
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.about-us-container {
+  margin-bottom: 4rem;
+}
+
+/* Banner Section */
+.listing-banner {
+  background-image: url("/images/listingBanner_.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.listing-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem;
+}
+
+.banner-title {
+  font-size: 3rem;
+  color: #fff;
+  margin: 0;
+  font-family: var(--font-heading);
+}
+
+.about-us-header {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: var(--font-buttons);
+}
+
+.header-description {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* About Us Content */
+.about-us-content {
+  display: flex;
+  gap: 2rem;
+  margin: 4rem 0;
+  flex-wrap: wrap;
+}
+.brand-img {
+  width: 50%;
+}
+.brand-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.brand-info {
+  flex: 1;
+  width: 50%;
+}
+
+.content-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: var(--font-buttons);
+}
+
+.content-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Cards Section */
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1rem;
+}
+
+.about-card {
+  border: 2px dashed #ccc;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.about-card-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 12px;
+  font-family: var(--font-buttons);
+}
+h1.about-card-title:before {
+  content: "";
+  border: 3px solid var(--yellow);
+  width: 50%;
+  position: absolute;
+  top: 100%;
+}
+.about-card-description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+@media (max-width: 786px) {
+  .listing-overlay {
+    padding: 4rem 0;
+  }
+  .listing-overlay .title {
+    font-size: 2rem;
+  }
+  .contact-us-form h1 {
+    font-size: 28px;
+  }
+  .form {
+    background-color: #fef8ed;
+    padding: 60px 10px;
+    border-radius: 12px;
+    margin-top: 32px;
+  }
+  .about-us-content {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .brand-img {
+    width: 100%;
+  }
+  .brand-info {
+    width: 100%;
+  }
+  .about-cards {
+    padding: 1rem;
+  }
+}

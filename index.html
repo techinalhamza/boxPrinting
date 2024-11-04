@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Value Box Printing</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <!-- swiper slider  -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- tailwind css -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            custom: ['"Font One"', '"Font Two"', "sans-serif"],
+            heading: ['"Gloock"', "serif"],
+            buttons: ['"Inter"', "serif"],
+          },
+          screens: {
+            xl: { max: "1200px" },
+            // => @media (max-width: 1279px) { ... }
+
+            lg: { max: "991px" },
+            lgm: { min: "991px" },
+            // => @media (max-width: 1023px) { ... }
+
+            md: { max: "767px" },
+            // => @media (max-width: 767px) { ... }
+
+            sm: { max: "786px" },
+            // => @media (max-width: 639px) { ... }
+            xsm: { max: "560px" },
+            // => @media (max-width: 639px) { ... }
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script> -->
+  </head>
+  <body>
+    <header>
+      <div class="main-container">
+        <div class="header-container">
+          <!-- Logo Section -->
+          <div class="logo">
+            <a href="/">
+              <img src="images/updatedLogo2.png" alt="Logo" />
+            </a>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="header-search-bar">
+            <div class="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input
+              type="search"
+              placeholder="Search products..."
+              id="searchInput"
+            />
+          </div>
+
+          <!-- Contact Details -->
+          <div class="contact-details">
+            <div class="nav-phone">
+              <div class="phone-icon">
+                <!-- <i class="fa-solid fa-phone-volume"></i> -->
+                <img src="/images/phone-call.svg" alt="" />
+              </div>
+              <div class="nav-num">
+                <p style="font-size: 12px; color: #7a869a">
+                  Need Help? Call us
+                </p>
+                <p>(713) 893-4763</p>
+              </div>
+            </div>
+            <div class="nav-divider">|</div>
+            <div class="nav-account">
+              <div class="user-icon">
+                <i class="fa-regular fa-user"></i>
+              </div>
+              <p>My Account</p>
+            </div>
+            <div class="hamburger-menu">
+              <i id="hamburgerIcon" class="fas fa-bars"></i>
+              <div id="menu hamburgerIcon" onclick="onClickMenu()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Navigation Bar -->
+    <div class="main-container">
+      <nav class="nav-container">
+        <ul class="nav-links menu">
+          <!-- Products List Dropdown -->
+          <li class="menu-item" onmouseenter="toggleDropdown(true)" onmouseleave="toggleDropdown(false)">
+            <a href="/shop.html" class="menu-link">
+              Products List
+              <span class="dropdown-icon">&#9660;</span> <!-- Down arrow icon -->
+            </a>
+            <div class="nav-dropdown" id="productDropdown">
+              <div class="dropdown-content" id="dropdownContent"></div>
+            </div>
+          </li>
+
+          <!-- Other Links -->
+          <li><a href="#">Quote By Style</a></li>
+          <li><a href="#">Upload Your Artwork</a></li>
+          <li><a href="#">Free Design Services</a></li>
+          <li><a href="#">Sample Request</a></li>
+        </ul>
+
+        <!-- Discount Tagline -->
+        <div class="nav-discount-tagline">
+          <!-- <i class="fas fa-percentage"></i> -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6 discount-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m8.99 14.993 6-6m6 3.001c0 1.268-.63 2.39-1.593 3.069a3.746 3.746 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043 3.745 3.745 0 0 1-3.068 1.593c-1.268 0-2.39-.63-3.068-1.593a3.745 3.745 0 0 1-3.296-1.043 3.746 3.746 0 0 1-1.043-3.297 3.746 3.746 0 0 1-1.593-3.068c0-1.268.63-2.39 1.593-3.068a3.746 3.746 0 0 1 1.043-3.297 3.745 3.745 0 0 1 3.296-1.042 3.745 3.745 0 0 1 3.068-1.594c1.268 0 2.39.63 3.068 1.593a3.745 3.745 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.297 3.746 3.746 0 0 1 1.593 3.068ZM9.74 9.743h.008v.007H9.74v-.007Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm4.125 4.5h.008v.008h-.008v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+            />
+          </svg>
+
+          <p>Get 10% off when you buy 2 custom products!</p>
+        </div>
+      </nav>
+    </div>
+
+    <!-- hero section  -->
+    <section>
+      <div class="hero-container">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item carousel-item1 active">
+              <div class="main-container">
+                <div class="slider-content">
+                  <div class="star-rating">
+                    <img src="/images/star.svg" alt="" class="star-icon" />
+                    <p class="star-text">#1 Printing Services</p>
+                  </div>
+                  <img
+                    src="/images/sliderText.png"
+                    alt=""
+                    class="slider-image"
+                  />
+                  <div class="slider-info">
+                    <p class="slider-description">
+                      Explore, design and order environmentally conscious
+                      packaging
+                    </p>
+                    <a href="#form-container">
+                      <button class="quote-button">
+                        REQUEST A QUOTE
+                        <i class="fa-solid fa-angle-right"></i></button
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item2">
+              <div class="main-container">
+                <div class="slider-content">
+                  <div class="star-rating">
+                    <img src="/images/star.svg" alt="" class="star-icon" />
+                    <p class="star-text">#1 Printing Services</p>
+                  </div>
+                  <img
+                    src="/images/sliderText.png"
+                    alt=""
+                    class="slider-image"
+                  />
+                  <div class="slider-info">
+                    <p class="slider-description">
+                      Explore, design and order environmentally conscious
+                      packaging
+                    </p>
+                    <a href="#form-container">
+                      <button class="quote-button">
+                        REQUEST A QUOTE
+                        <i class="fa-solid fa-angle-right"></i></button
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item3">
+              <div class="main-container">
+                <div class="slider-content">
+                  <div class="star-rating">
+                    <img src="/images/star.svg" alt="" class="star-icon" />
+                    <p class="star-text">#1 Printing Services</p>
+                  </div>
+                  <img
+                    src="/images/sliderText.png"
+                    alt=""
+                    class="slider-image"
+                  />
+                  <div class="slider-info">
+                    <p class="slider-description">
+                      Explore, design and order environmentally conscious
+                      packaging
+                    </p>
+                    <a href="#form-container">
+                      <button class="quote-button">
+                        REQUEST A QUOTE
+                        <i class="fa-solid fa-angle-right"></i></button
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- popular products -->
+    <div class="product-container">
+      <div class="main-container">
+        <!-- Title Bar -->
+        <div class="product-title-bar">
+          <h1 class="title">Popular Print Products</h1>
+          <ul class="tab-links">
+            <!-- Tab Links -->
+            <li class="tab-item" id="bestSellerLink">Best Seller</li>
+            <li>|</li>
+            <li class="tab-item" id="newArrivalLink">New Arrival</li>
+            <li>|</li>
+            <li class="tab-item" id="topSellerLink">Top Seller</li>
+            <!-- Shop All Button -->
+            <li>
+              <a href="/shop.html" class="shop-all-btn">
+                Shop All
+                <svg
+                  class="icon-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Product Lists -->
+        <div id="product-list">
+          <div class="all-product-container" id="popularProductsSection">
+            <!-- Loop through products here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- why choose us section -->
+    <div class="choose-container">
+      <div class="main-container">
+        <div class="choose-content">
+          <div class="choose-top">
+            <p class="options-text">OPTIONS AND MATERIALS</p>
+            <div class="title-container">
+              <img src="/images/star.svg" alt="Star" class="star-icon" />
+              <h1 class="heading">
+                build your <span class="highlight">cosmetics</span> boxes any
+                way you want
+              </h1>
+            </div>
+            <p class="subheading">
+              enjoy your endless packaging customization to create the cosmetic
+              product packaging you need to succeed
+            </p>
+          </div>
+
+          <!-- Cards Section -->
+          <div class="choose-card-container">
+            <!-- Card 1 -->
+            <div class="choose-card">
+              <img
+                src="/images/castom size.png"
+                alt="Custom Size"
+                class="card-icon"
+              />
+              <h1 class="card-title">Custom Size</h1>
+              <p class="card-description">
+                Take Control And Customize The Size You Need For Your Apparel
+                Packaging To Improve Waste Management For Your Brand.
+              </p>
+            </div>
+            <!-- Card 2 -->
+            <div class="choose-card">
+              <img
+                src="/images/custom matrial.png"
+                alt="Custom Materials"
+                class="card-icon"
+              />
+              <h1 class="card-title">Custom Materials</h1>
+              <p class="card-description">
+                Need A Specific Material To Communicate Your Look And Feel?
+                Enjoy The Luxury Of Accessing Our Extensive Library Of
+                Materials.
+              </p>
+            </div>
+            <!-- Card 3 -->
+            <div class="choose-card">
+              <img
+                src="/images/custom print.png"
+                alt="Custom Print"
+                class="card-icon"
+              />
+              <h1 class="card-title">Custom Print</h1>
+              <p class="card-description">
+                Choose The Ideal Printing Method For Your Beauty Packaging And
+                Take Advantage Of The Exterior And Interior Of Your Box.
+              </p>
+            </div>
+            <!-- Card 4 -->
+            <div class="choose-card">
+              <img
+                src="/images/custom finishes.png"
+                alt="Custom Finishes"
+                class="card-icon"
+              />
+              <h1 class="card-title">Custom Finishes</h1>
+              <p class="card-description">
+                Embellish Your Clothing Box With Special Finishes To Create A
+                Unique Experience That Sets You And Your Competitors Apart.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- coating section -->
+
+    <div class="coating-container">
+      <div class="main-container">
+        <!-- Navigation Bar -->
+        <div class="coating-navigation-bar">
+          <ul id="nav-links" class="coating-nav-links">
+            <!-- Options will be injected here dynamically -->
+          </ul>
+        </div>
+
+        <!-- Coating Cards Container -->
+        <div id="cards-container" class="coating-cards-container">
+          <!-- Filtered items will appear here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- category slider section -->
+    <div class="category-container">
+      <div class="main-container">
+        <!-- Title and Button Section -->
+        <div class="header-section">
+          <h1>Shop By Category</h1>
+          <a href="/shop.html" class="shop-button">Shop All</a>
+        </div>
+
+        <!-- Swiper Carousel -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Category Item 1 -->
+            <div class="swiper-slide category-item">
+              <div class="category-image">
+                <img src="/images/castom boxes.jpg" alt="Cosmetics & Beauty" />
+              </div>
+              <a href="#" class="category-link" onclick="selectCategoryPath(event, 'COSMETICS & BEAUTY')">COSMETICS & BEAUTY</a>
+              
+            </div>
+
+            <!-- Category Item 2 -->
+            <div class="swiper-slide category-item">
+              <div class="category-image">
+                <img
+                  src="/images/custom-software-boxes.jpg"
+                  alt="Software & Electronic"
+                />
+              </div>
+              <a href="/category/software-electronic" class="category-name"
+                >Software & Electronic</a
+              >
+            </div>
+
+            <!-- Additional Category Items -->
+            <div class="swiper-slide category-item">
+              <div class="category-image">
+                <img src="/images/soap boxes.jpg" alt="Soap Boxes" />
+              </div>
+              <a href="/category/soap-boxes" class="category-name"
+                >Soap Boxes</a
+              >
+            </div>
+
+            <div class="swiper-slide category-item">
+              <div class="category-image">
+                <img src="/images/wendow boxes.jpg" alt="Display Packaging" />
+              </div>
+              <a href="/category/display-packaging" class="category-name"
+                >Display Packaging</a
+              >
+            </div>
+
+            <div class="swiper-slide category-item">
+              <div class="category-image">
+                <img
+                  src="/images/popup-display-boxes.jpg"
+                  alt="Display Packaging"
+                  class=""
+                />
+              </div>
+              <a href="/category/display-packaging" class=""
+                >Display Packaging</a
+              >
+            </div>
+            <div class="swiper-slide category-item">
+              <div class="category-image">
+                <img
+                  src="/images/body fusion.jpg"
+                  alt="Display Packaging"
+                  class=""
+                />
+              </div>
+              <a href="/category/display-packaging" class=""
+                >Display Packaging</a
+              >
+            </div>
+
+            <!-- Additional items as needed -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Our Experts Section -->
+    <div
+      class="expert-container"
+      style="background-image: url('/images/expertFadebg.jpg')"
+    >
+      <div class="main-container">
+        <div class="expert-content">
+          <!-- Expert Image -->
+          <div class="expert-img">
+            <img src="/images/expertBanner.png" alt="Expert Banner" />
+          </div>
+
+          <!-- Expert Information -->
+          <div class="expert-info">
+            <div class="expert-header">
+              <img src="/images/star.svg" alt="Star Icon" class="star-icon" />
+              <p>#1 Printing Services</p>
+            </div>
+
+            <h1 class="expert-title">
+              Not Sure What You Want? Our Experts Can Help
+            </h1>
+
+            <!-- Expert Cards -->
+            <div class="expert-cards">
+              <!-- Card 1 -->
+              <div class="choose-card">
+                <img
+                  src="/images/customer-support.png"
+                  alt="Customer Support Icon"
+                />
+                <h2>Customer Support</h2>
+                <p>
+                  Provide Outstanding Unlimited Support To Your Packaging
+                  Project
+                </p>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="choose-card">
+                <img
+                  src="/images/custom-solution.png"
+                  alt="Custom Solution Icon"
+                />
+                <h2>End To End Solution</h2>
+                <p>
+                  Get Dedicated Support From Start To Finish And Even Beyond
+                </p>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="choose-card">
+                <img src="/images/custom-packaging.png" alt="Packaging Icon" />
+                <h2>Packaging Without Limits</h2>
+                <p>
+                  Our Packaging Experts Are Able To Help Turn Your Idea To
+                  Reality.
+                </p>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="choose-card">
+                <img src="/images/high-quality.png" alt="High Quality Icon" />
+                <h2>High Quality Guaranteed</h2>
+                <p>Enjoy The Perks Of Our Proactive Cost Saving Solutions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FAQ Accordion Section -->
+    <div class="according-container">
+      <div class="main-container">
+        <!-- Title Bar -->
+        <div class="accordind-title-bar">
+          <h1>Frequently Asked Questions (FAQs)</h1>
+        </div>
+
+        <!-- Accordions -->
+        <div class="accordion-section">
+          <!-- Accordion Item 1 -->
+          <div class="accordion-item">
+            <button class="accordion-button" onclick="toggleAccordion(this)">
+              <span>What types of boxes can you print?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              We offer a wide range of box printing services, including custom
+              sizes, shapes, and designs. Whether you need retail packaging,
+              shipping boxes, or specialty designs, we can handle it all.
+            </div>
+          </div>
+
+          <!-- Accordion Item 2 -->
+          <div class="accordion-item">
+            <button class="accordion-button" onclick="toggleAccordion(this)">
+              <span>Can I provide my own design for the boxes?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              Absolutely! You can provide your own design, or our design team
+              can work with you to create a custom look that fits your brand.
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div class="accordion-item">
+            <button class="accordion-button" onclick="toggleAccordion(this)">
+              <span>What is the minimum order quantity?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              Our minimum order quantity varies depending on the type and size
+              of the box, but we strive to accommodate both small and large
+              orders.
+            </div>
+          </div>
+
+          <!-- Accordion Item 4 -->
+          <div class="accordion-item">
+            <button class="accordion-button" onclick="toggleAccordion(this)">
+              <span>How long does it take to complete an order?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              Production times depend on the complexity and quantity of your
+              order. We typically complete orders within 7-10 business days, but
+              we also offer expedited services if you’re on a tight deadline.
+            </div>
+          </div>
+
+          <!-- Accordion Item 5 -->
+          <div class="accordion-item">
+            <button class="accordion-button" onclick="toggleAccordion(this)">
+              <span>Do you offer eco-friendly packaging options?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              Yes, we offer eco-friendly materials and printing options to help
+              reduce environmental impact while maintaining high-quality
+              results.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Quote form  -->
+    <div class="form-container" id="form-container">
+      <div class="main-container">
+        <div class="form-content">
+          <h1>Immediate Box Printing</h1>
+          <p>
+            When You Have <span>Immediate Box Printing</span> Need, We Can
+            Typically Turn Your Quote Around In Minutes.
+          </p>
+          <form>
+            <!-- First Row: Length, Width, Height -->
+            <div class="form-row thirds">
+              <div class="field">
+                <label for="length"
+                  >Length (inch) <span style="color: red">*</span></label
+                >
+                <input id="length" name="length" type="text" required />
+              </div>
+              <div class="field">
+                <label for="width"
+                  >Width (inch) <span style="color: red">*</span></label
+                >
+                <input id="width" name="width" type="text" required />
+              </div>
+              <div class="field">
+                <label for="height"
+                  >Height (inch) <span style="color: red">*</span></label
+                >
+                <input id="height" name="height" type="text" required />
+              </div>
+            </div>
+
+            <!-- Second Row: Stock Option, Print Option, Finishing Option -->
+            <div class="form-row thirds">
+              <div class="field">
+                <label for="stockOption">Stock Option</label>
+                <select id="stockOption" name="stockOption">
+                  <option value="">Select Print Option</option>
+                  <option value="Full_Color_Printing">
+                    Full Color Printing
+                  </option>
+                  <option value="1_Color_Printing">1 Color Printing</option>
+                  <option value="2_Color_Printing">2 Color Printing</option>
+                  <option value="3_Color_Printing">3 Color Printing</option>
+                  <option value="No_Printing">No Printing</option>
+                  <option value="PMS_Color_Printing">PMS Color Printing</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="printOption">Print Option</label>
+                <select id="printOption" name="printOption">
+                  <option value="">Select Stock Option</option>
+                  <option value="14_pt_Card_Stock">14 pt. Card Stock</option>
+                  <option value="16_pt_Card_Stock">16 pt. Card Stock</option>
+                  <option value="18_pt_Card_Stock">18 pt. Card Stock</option>
+                  <option value="24_pt_Card_Stock">24 pt. Card Stock</option>
+                  <option value="Brown_Kraft_Stock">Brown Kraft Stock</option>
+                  <option value="White_Kraft_Stock">White Kraft Stock</option>
+                  <option value="Brown_Corrugated">Brown Corrugated</option>
+                  <option value="White_Corrugated">White Corrugated</option>
+                  <option value="Texture_Stock">Texture Stock</option>
+                  <option value="Linen_Stock">Linen Stock</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="finishingOption">Finishing Option</label>
+                <select id="finishingOption" name="finishingOption">
+                  <option value="">Select Finishing Option</option>
+                  <option value="Matte_Finish">Matte Finish</option>
+                  <option value="Spot_UV">
+                    Spot UV (Matte Surface + Glossy)
+                  </option>
+                  <option value="Aqueous_Coating">Aqueous Coating</option>
+                  <option value="Semi_Gloss_Finish">Semi Gloss Finish</option>
+                  <option value="Gold_Foiling">
+                    Gold Foiling (Glossy or Matte Finish)
+                  </option>
+                  <option value="Silver_Foiling">
+                    Silver Foiling (Glossy or Matte Finish)
+                  </option>
+                  <option value="Holographic_Foiling">
+                    Holographic Foiling (Glossy or Matte Finish)
+                  </option>
+                  <option value="Others">Others</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Third Row: Quantity, Full Name, Email -->
+            <div class="form-row thirds">
+              <div class="field">
+                <label for="quantity"
+                  >Quantity <span style="color: red">*</span></label
+                >
+                <input id="quantity" name="quantity" type="number" required />
+              </div>
+              <div class="field">
+                <label for="fullName"
+                  >Full Name <span style="color: red">*</span></label
+                >
+                <input id="fullName" name="fullName" type="text" required />
+              </div>
+              <div class="field">
+                <label for="company">Company Name</label>
+                <input id="company" name="company" type="text" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="Phone">Phone Num</label>
+                <input id="Phone" name="Phone" type="number" />
+              </div>
+              <div class="field">
+                <label for="email"
+                  >Email Address <span style="color: red">*</span></label
+                >
+                <input id="email" name="email" type="email" required />
+              </div>
+            </div>
+
+            <!-- Fourth Row: Job Details (Full Width) -->
+            <div class="mb-1">
+              <label for="jobDetails">Details</label>
+              <textarea
+                id="jobDetails"
+                name="jobDetails"
+                rows="8"
+                placeholder="Type Your Needs Here in Details"
+              ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+              <button type="submit" class="button-submit">
+                Get Price Quote <i class="fas fa-angle-right"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- review sections -->
+    <div class="testimonials-container main-container">
+      <!-- Header Section -->
+      <div class="review-header-section">
+        <p>2,157 people have said how good Rareblocks</p>
+        <h2>Our happy clients say about us</h2>
+      </div>
+
+      <!-- Reviews Link -->
+      <div>
+        <a href="#" class="reviews-link">Check all 2,157 reviews</a>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div
+        class="testimonials-grid"
+        style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))"
+      >
+        <div class="gradient-container">
+          <div class="gradient"></div>
+        </div>
+        <!-- Testimonial Card 1 -->
+        <div class="testimonial-card">
+          <div class="star-rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+          </div>
+          <blockquote>
+            “Impressed with the custom die-cut boxes! Value Box's attention to
+            detail is amazing.”
+          </blockquote>
+          <div class="client-info">
+            <img src="/images/avatar-female.png" alt="Client Image 1" />
+            <div class="client-details">
+              <p class="client-name">Jenny Wilson</p>
+              <p class="client-title">CEO, Company</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="star-rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+          </div>
+
+          <blockquote>
+            “Value Box delivered high-quality packaging with vibrant prints.
+            Fast turnaround and great customer service!”
+          </blockquote>
+          <div class="client-info">
+            <img src="/images/avatar-male-1.png" alt="Client Image 1" />
+            <div class="client-details">
+              <p class="client-name">John Doe</p>
+              <p class="client-title">CEO, Company</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="star-rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+          </div>
+          <blockquote>
+            “Great experience! Value Box helped me choose the perfect packaging,
+            and the prices were unbeatable.”
+          </blockquote>
+          <div class="client-info">
+            <img src="/images/avatar-male-2.png" alt="Client Image 1" />
+            <div class="client-details">
+              <p class="client-name">Jacob Jones</p>
+              <p class="client-title">CEO, Company</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Testimonial Cards can be added in the same structure -->
+      </div>
+    </div>
+    <!-- footer top newsletter -->
+    <div class="footer-top-container">
+      <div class="main-container">
+        <div class="grid-container">
+          <div class="content">
+            <h1 class="heading">
+              Sign up for exclusive promotions on
+              <br />
+              our packaging products.
+            </h1>
+          </div>
+
+          <div class="newslatter-mail-input">
+            <input class="input" type="text" placeholder="Enter Name" />
+            <input class="input" type="email" placeholder="Enter Email" />
+            <!-- <button class="">Notify Me</button> -->
+            <input type="button" value="Notify Me" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-container">
+      <div class="main-container">
+        <div class="footer-content">
+          <div class="footer-data">
+            <div class="footer-col">
+              <h1 class="footer-logo">VALUE BOX PRINTING</h1>
+              <div class="company-info">
+                <p>
+                  valueBox is your go-to for custom box printing. We create
+                  packaging that reflects your brand, combining quality and
+                  design to bring your ideas to life.
+                </p>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <div class="hd">Quick Links</div>
+              <div class="links">
+                <ul>
+                  <li>
+                    <a href="/"><i class="fas fa-arrow-right"></i> Home</a>
+                  </li>
+                  <li>
+                    <a href="/shop.html"
+                      ><i class="fas fa-arrow-right"></i> Shop</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/about.html"
+                      ><i class="fas fa-arrow-right"></i> About us</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/contact.html"
+                      ><i class="fas fa-arrow-right"></i> Contact us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <div class="hd">Company</div>
+              <div class="links">
+                <ul>
+                  <li>
+                    <a href="/delivery-info"
+                      ><i class="fas fa-arrow-right"></i> Delivery
+                      Information</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/privacy-policy"
+                      ><i class="fas fa-arrow-right"></i> Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/term-conditions"
+                      ><i class="fas fa-arrow-right"></i> Terms & Conditions</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/support"
+                      ><i class="fas fa-arrow-right"></i> Support Center</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <div class="hd">Social Links</div>
+              <div class="links">
+                <ul>
+                  <li>
+                    <a><i class="fab fa-facebook"></i> Facebook</a>
+                  </li>
+                  <li>
+                    <a><i class="fab fa-instagram"></i> Instagram</a>
+                  </li>
+                  <li>
+                    <a><i class="fab fa-tiktok"></i> Tiktok</a>
+                  </li>
+                  <li>
+                    <a><i class="fab fa-linkedin"></i> Linkedin</a>
+                  </li>
+                  <li>
+                    <a><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <div class="contact-title">Contact Us</div>
+              <div class="contact-info">
+                <h1>
+                  <i class="fas fa-location-dot"></i> <span>Address:</span> 5171
+                  W Campbell Ave undefined Kent, Utah 53127 Lahore
+                </h1>
+                <h1>
+                  <i class="fas fa-headphones-simple"></i>
+                  <span>Call Us:</span> (+91) - 540-025-124553
+                </h1>
+                <h1>
+                  <i class="fas fa-paper-plane"></i>
+                  <span>Email:</span> info@valueBoxprinting.com
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Bottom Section -->
+    <div class="copy-right-contianer">
+      <div class="main-container">
+        <div class="copy-right-content">
+          <div class="copy-tagline">
+            <p class="">© 2024 ValueBox. All Rights Reserved</p>
+          </div>
+          <div class="payment-icons">
+            <img src="/images/payment.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        // slidesPerView: 5,
+        spaceBetween: 20,
+        loop: false,
+        // autoplay: {
+        //   delay: 1500,
+        //   disableOnInteraction: false,
+        // },
+        breakpoints: {
+          1400: { slidesPerView: 5 },
+          1200: { slidesPerView: 4 },
+          560: { slidesPerView: 2 },
+          200: { selidePerview: 2 },
+        },
+      });
+    </script>
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

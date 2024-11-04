@@ -1,0 +1,155 @@
+.contact-us-banner .contact-us-breadcrumb {
+  background-image: url("/images/contactus-banner.jpg");
+  background-position: center;
+  background-size: cover;
+  /* height: 50vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact__content__container {
+  margin: 4rem auto;
+}
+.listing-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 0;
+}
+
+.title {
+  font-size: 4rem;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-us-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 16px;
+  padding: 0 16px;
+}
+
+.contact-card {
+  background-color: #fff;
+  border: 2px dashed #e0e0e0;
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon {
+  width: 50px;
+  margin-bottom: 8px;
+}
+
+.contact-us-form {
+  margin-top: 48px;
+  /* padding: 0 16px; */
+}
+
+.form-header {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-header img{
+  width: 32px;
+}
+.contact-us-form h1 {
+  font-size: 2.5rem;
+  margin: 16px 0;
+  text-align: center;
+}
+
+.contact-us-form p {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+}
+
+.form {
+  background-color: #fef8ed;
+  padding: 48px;
+  border-radius: 12px;
+  margin-top: 32px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 1rem;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+/* .full-width {
+  grid-column: span 2;
+} */
+
+.input-group input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  outline: none;
+  resize: none;
+  margin-top: 16px;
+  border: none;
+}
+
+.submit-btn {
+  background-color: #f4b400;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.submit-btn:hover {
+  background-color: #e09b00;
+}
+
+
+@media (max-width:786px) {
+  .listing-overlay{
+    padding:4rem 0;
+  }
+  .listing-overlay .title{
+    font-size: 2rem;
+  }
+    .contact-us-form h1{
+      font-size: 28px;
+    }
+        .form {
+          background-color: #fef8ed;
+          padding: 60px 10px;
+          border-radius: 12px;
+          margin-top: 32px;
+        }
+}

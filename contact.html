@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="main-container">
+        <div class="header-container">
+          <!-- Logo Section -->
+          <div class="logo">
+            <a href="/">
+              <img src="images/updatedLogo2.png" alt="Logo" />
+            </a>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="header-search-bar">
+            <div class="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input
+              type="search"
+              placeholder="Search products..."
+              id="searchInput"
+            />
+          </div>
+
+          <!-- Contact Details -->
+          <div class="contact-details">
+            <div class="nav-phone">
+              <div class="phone-icon">
+                <!-- <i class="fa-solid fa-phone-volume"></i> -->
+                <img src="/images/phone-call.svg" alt="" />
+              </div>
+              <div class="nav-num">
+                <p style="font-size: 12px; color: #7a869a">
+                  Need Help? Call us
+                </p>
+                <p>(713) 893-4763</p>
+              </div>
+            </div>
+            <div class="nav-divider">|</div>
+            <div class="nav-account">
+              <div class="user-icon">
+                <i class="fa-regular fa-user"></i>
+              </div>
+              <p>My Account</p>
+            </div>
+            <div class="hamburger-menu">
+              <i id="hamburgerIcon" class="fas fa-bars"></i>
+              <div id="menu hamburgerIcon" onclick="onClickMenu()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Navigation Bar -->
+    <div class="main-container">
+      <nav class="nav-container">
+        <ul class="nav-links menu">
+          <!-- Products List Dropdown -->
+          <li class="menu-item" onmouseenter="toggleDropdown(true)" onmouseleave="toggleDropdown(false)">
+            <a href="/shop.html" class="menu-link">
+              Products List
+              <span class="dropdown-icon">&#9660;</span> <!-- Down arrow icon -->
+            </a>
+            <div class="nav-dropdown" id="productDropdown">
+              <div class="dropdown-content" id="dropdownContent"></div>
+            </div>
+          </li>
+
+          <!-- Other Links -->
+          <li><a href="#">Quote By Style</a></li>
+          <li><a href="#">Upload Your Artwork</a></li>
+          <li><a href="#">Free Design Services</a></li>
+          <li><a href="#">Sample Request</a></li>
+        </ul>
+        <!-- Discount Tagline -->
+        <div class="nav-discount-tagline">
+          <!-- <i class="fas fa-percentage"></i> -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6 discount-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m8.99 14.993 6-6m6 3.001c0 1.268-.63 2.39-1.593 3.069a3.746 3.746 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043 3.745 3.745 0 0 1-3.068 1.593c-1.268 0-2.39-.63-3.068-1.593a3.745 3.745 0 0 1-3.296-1.043 3.746 3.746 0 0 1-1.043-3.297 3.746 3.746 0 0 1-1.593-3.068c0-1.268.63-2.39 1.593-3.068a3.746 3.746 0 0 1 1.043-3.297 3.745 3.745 0 0 1 3.296-1.042 3.745 3.745 0 0 1 3.068-1.594c1.268 0 2.39.63 3.068 1.593a3.745 3.745 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.297 3.746 3.746 0 0 1 1.593 3.068ZM9.74 9.743h.008v.007H9.74v-.007Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm4.125 4.5h.008v.008h-.008v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+            />
+          </svg>
+
+          <p>Get 10% off when you buy 2 custom products!</p>
+        </div>
+      </nav>
+    </div>
+
+    <div class="contact-us-banner">
+      <div class="contact-us-breadcrumb">
+        <div class="listing-overlay">
+          <h1 class="title">Contact Us</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-container contact__content__container">
+      <div class="contact-us-cards-container">
+        <div class="contact-card">
+          <img src="/images/contact.png" alt="Phone Icon" class="icon" />
+          <p>If you need help, don't look far, call us today!</p>
+          <b>+92-300-0000-000</b>
+        </div>
+        <div class="contact-card">
+          <img src="/images/location.png" alt="Location Icon" class="icon" />
+          <p>Visit our office</p>
+          <b>3501 Jack Northrop Ave, Hawthorne, CA United States</b>
+        </div>
+        <div class="contact-card">
+          <img src="/images/mail.png" alt="Mail Icon" class="icon" />
+          <p>Do you have a project to work on? Send your details.</p>
+          <b>info@valueBoxPrinting.com</b>
+        </div>
+      </div>
+
+      <div class="contact-us-form">
+        <div class="subheading">
+          <div class="form-header">
+            <img
+              src="/images/workTogether.png"
+              alt="Work Icon"
+              class="work-icon"
+            />
+            <p>Work Together</p>
+          </div>
+          <h1>Tell us what you're Looking For</h1>
+          <p>
+            There are many variations of passages of lorem but the majority.
+          </p>
+        </div>
+
+        <form class="form">
+          <div class="form-row">
+            <div class="input-group">
+              <input type="text" placeholder="Name" />
+
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-group">
+              <input type="email" placeholder="Email" />
+
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input-group full-width">
+              <input type="number" placeholder="Phone" />
+
+              <i class="fa-solid fa-phone-flip"></i>
+            </div>
+          </div>
+          <div class="input-group full-width">
+            <input type="text" placeholder="Subject" />
+            <i class="fa-solid fa-calendar-week"></i>
+          </div>
+          <textarea placeholder="Your Message" rows="10"></textarea>
+          <button type="submit" class="submit-btn">Send Your Message</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- footer top newsletter -->
+    <div class="footer-top-container">
+      <div class="main-container">
+        <div class="grid-container">
+          <div class="content">
+            <h1 class="heading">
+              Sign up for exclusive promotions on
+              <br />
+              our packaging products.
+            </h1>
+          </div>
+
+          <div class="newslatter-mail-input">
+            <input class="input" type="text" placeholder="Enter Name" />
+            <input class="input" type="email" placeholder="Enter Email" />
+            <!-- <button class="">Notify Me</button> -->
+            <input type="button" value="Notify Me" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-container">
+      <div class="main-container">
+        <div class="footer-content">
+          <div class="footer-data">
+            <div class="footer-col">
+              <h1 class="footer-logo">VALUE BOX PRINTING</h1>
+              <div class="company-info">
+                <p>
+                  valueBox is your go-to for custom box printing. We create
+                  packaging that reflects your brand, combining quality and
+                  design to bring your ideas to life.
+                </p>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <div class="hd">Quick Links</div>
+              <div class="links">
+                <ul>
+                  <li>
+                    <a href="/"><i class="fas fa-arrow-right"></i> Home</a>
+                  </li>
+                  <li>
+                    <a href="/shop.html"
+                      ><i class="fas fa-arrow-right"></i> Shop</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/about"
+                      ><i class="fas fa-arrow-right"></i> About us</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/contact.html"
+                      ><i class="fas fa-arrow-right"></i> Contact us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <div class="hd">Company</div>
+              <div class="links">
+                <ul>
+                  <li>
+                    <a href="/delivery-info"
+                      ><i class="fas fa-arrow-right"></i> Delivery
+                      Information</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/privacy-policy"
+                      ><i class="fas fa-arrow-right"></i> Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/term-conditions"
+                      ><i class="fas fa-arrow-right"></i> Terms & Conditions</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/support"
+                      ><i class="fas fa-arrow-right"></i> Support Center</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <div class="hd">Social Links</div>
+              <div class="links">
+                <ul>
+                  <li>
+                    <a><i class="fab fa-facebook"></i> Facebook</a>
+                  </li>
+                  <li>
+                    <a><i class="fab fa-instagram"></i> Instagram</a>
+                  </li>
+                  <li>
+                    <a><i class="fab fa-tiktok"></i> Tiktok</a>
+                  </li>
+                  <li>
+                    <a><i class="fab fa-linkedin"></i> Linkedin</a>
+                  </li>
+                  <li>
+                    <a><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <div class="contact-title">Contact Us</div>
+              <div class="contact-info">
+                <h1>
+                  <i class="fas fa-location-dot"></i> <span>Address:</span> 5171
+                  W Campbell Ave undefined Kent, Utah 53127 Lahore
+                </h1>
+                <h1>
+                  <i class="fas fa-headphones-simple"></i>
+                  <span>Call Us:</span> (+91) - 540-025-124553
+                </h1>
+                <h1>
+                  <i class="fas fa-paper-plane"></i>
+                  <span>Email:</span> info@valueBoxprinting.com
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Bottom Section -->
+    <div class="copy-right-contianer">
+      <div class="main-container">
+        <div class="copy-right-content">
+          <div class="copy-tagline">
+            <p class="">© 2024 ValueBox. All Rights Reserved</p>
+          </div>
+          <div class="payment-icons">
+            <img src="/images/payment.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>

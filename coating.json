@@ -1,0 +1,460 @@
+[
+    {
+        "category": "COATING & LAMINATIONS",
+        "items": [
+          {
+            "id": "1",
+            "name": "AQUEOUS COATING",
+            "desc": " Clear, Fast-Drying, Water-Based, And Eco-Friendly Coating. Available In Gloss Or Matte Finish.",
+            "img": "/images/coating1.png",
+            "images": [
+              "/images/coating1.png",
+              "/images/coating1.png",
+              "/images/coating1.png",
+              "/images/coating1.png"
+            ],
+            "cat": "COATING & LAMINATIONS"
+          },
+    
+          {
+            "id": "2",
+            "name": "AQUEOUS COATING",
+            "desc": " Clear, Fast-Drying, Water-Based, And Eco-Friendly Coating. Available In Gloss Or Matte Finish.",
+            "img": "/images/coating1.png",
+            "images": [
+              "/images/coating1.png",
+              "/images/coating1.png",
+              "/images/coating1.png",
+              "/images/coating1.png"
+            ],
+            "cat": "COATING & LAMINATIONS"
+          },
+    
+          {
+            "id": "3",
+            "name": "AQUEOUS COATING",
+            "desc": " Clear, Fast-Drying, Water-Based, And Eco-Friendly Coating. Available In Gloss Or Matte Finish.",
+            "img": "/images/coating1.png",
+            "images": [
+              "/images/coating1.png",
+              "/images/coating1.png",
+              "/images/coating1.png",
+              "/images/coating1.png"
+            ],
+            "cat": "COATING & LAMINATIONS"
+          },
+    
+          {
+            "id": "4",
+            "name": "AQUEOUS COATING",
+            "desc": " Clear, Fast-Drying, Water-Based, And Eco-Friendly Coating. Available In Gloss Or Matte Finish.",
+            "img": "/images/coating1.png",
+            "images": [
+              "/images/coating1.png",
+              "/images/coating1.png",
+              "/images/coating1.png",
+              "/images/coating1.png"
+            ],
+            "cat": "COATING & LAMINATIONS"
+          },
+    
+          {
+            "id": "5",
+            "name": "AQUEOUS COATING",
+            "desc": " Clear, Fast-Drying, Water-Based, And Eco-Friendly Coating. Available In Gloss Or Matte Finish.",
+            "img": "/images/coating1.png",
+            "images": [
+              "/images/coating1.png",
+              "/images/coating1.png",
+              "/images/coating1.png",
+              "/images/coating1.png"
+            ],
+            "cat": "COATING & LAMINATIONS"
+          },
+    
+          {
+            "id": "6",
+            "name": "AQUEOUS COATING",
+            "desc": " Clear, Fast-Drying, Water-Based, And Eco-Friendly Coating. Available In Gloss Or Matte Finish.",
+            "img": "/images/coating1.png",
+            "images": [
+              "/images/coating1.png",
+              "/images/coating1.png",
+              "/images/coating1.png",
+              "/images/coating1.png"
+            ],
+            "cat": "COATING & LAMINATIONS"
+          },
+    
+          {
+            "id": "7",
+            "name": "AQUEOUS COATING",
+            "desc": " Clear, Fast-Drying, Water-Based, And Eco-Friendly Coating. Available In Gloss Or Matte Finish.",
+            "img": "/images/coating1.png",
+            "images": [
+              "/images/coating1.png",
+              "/images/coating1.png",
+              "/images/coating1.png",
+              "/images/coating1.png"
+            ],
+            "cat": "COATING & LAMINATIONS"
+          },
+    
+          {
+            "id": "8",
+            "name": "AQUEOUS COATING",
+            "desc": " Clear, Fast-Drying, Water-Based, And Eco-Friendly Coating. Available In Gloss Or Matte Finish.",
+            "img": "/images/coating1.png",
+            "images": [
+              "/images/coating1.png",
+              "/images/coating1.png",
+              "/images/coating1.png",
+              "/images/coating1.png"
+            ],
+            "cat": "COATING & LAMINATIONS"
+          }
+        ]
+      },
+      {
+        "category": "PRINTING OPTIONS",
+        "items": [
+          {
+            "id": "9",
+            "name": "Offset Print",
+            "desc": "High-quality printing method that utilizes a printing plate and rubber blanket to transfer designs on paper. Best for large runs.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg"
+            ],
+            "cat": "PRINTING OPTIONS"
+          },
+          {
+            "id": "10",
+            "name": "Offset Print",
+            "desc": "High-quality printing method that utilizes a printing plate and rubber blanket to transfer designs on paper. Best for large runs.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg"
+            ],
+            "cat": "PRINTING OPTIONS"
+          },
+          {
+            "id": "11",
+            "name": "Offset Print",
+            "desc": "High-quality printing method that utilizes a printing plate and rubber blanket to transfer designs on paper. Best for large runs.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg"
+            ],
+            "cat": "PRINTING OPTIONS"
+          },
+          {
+            "id": "12",
+            "name": "Offset Print",
+            "desc": "High-quality printing method that utilizes a printing plate and rubber blanket to transfer designs on paper. Best for large runs.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/printer-1.jpg"
+            ],
+            "cat": "PRINTING OPTIONS"
+          }
+        ]
+      },
+      {
+        "category": "SPECIAL FINISHES",
+        "items": [
+          {
+            "id": "13",
+            "name": "Hot Foil Stamping",
+            "desc": " Form of relief printing in which foil is transferred to a surface at high temperatures.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg"
+            ],
+            "cat": "Hot Foil Stamping"
+          },
+          {
+            "id": "14",
+            "name": "Hot Foil Stamping",
+            "desc": " Form of relief printing in which foil is transferred to a surface at high temperatures.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg"
+            ],
+            "cat": "Hot Foil Stamping"
+          },
+          {
+            "id": "15",
+            "name": "Hot Foil Stamping",
+            "desc": " Form of relief printing in which foil is transferred to a surface at high temperatures.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg"
+            ],
+            "cat": "Hot Foil Stamping"
+          },
+          {
+            "id": "16",
+            "name": "Hot Foil Stamping",
+            "desc": " Form of relief printing in which foil is transferred to a surface at high temperatures.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/finishing-6.jpg"
+            ],
+            "cat": "Hot Foil Stamping"
+          }
+        ]
+      },
+      {
+        "category": "PAPERBOARD",
+        "items": [
+          {
+            "id": "17",
+            "name": "SBS C1S",
+            "desc": " Premium-grade bleached white paperboard coated on one side for high-quality printing and finishes.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg"
+            ],
+            "cat": "PAPERBOARD"
+          },
+          {
+            "id": "18",
+            "name": "SBS C1S",
+            "desc": " Premium-grade bleached white paperboard coated on one side for high-quality printing and finishes.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg"
+            ],
+            "cat": "PAPERBOARD"
+          },
+          {
+            "id": "19",
+            "name": "SBS C1S",
+            "desc": " Premium-grade bleached white paperboard coated on one side for high-quality printing and finishes.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg"
+            ],
+            "cat": "PAPERBOARD"
+          },
+          {
+            "id": "20",
+            "name": "SBS C1S",
+            "desc": " Premium-grade bleached white paperboard coated on one side for high-quality printing and finishes.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/01-c1s.jpg"
+            ],
+            "cat": "PAPERBOARD"
+          }
+        ]
+      },
+      {
+        "category": "CORRUGATED",
+        "items": [
+          {
+            "id": "21",
+            "name": "Natural Kraft Board",
+            "desc": " Uncoated and unbleached kraft linerboard made from a mixture of virgin and recycled paper pulp.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg"
+            ],
+            "cat": "CORRUGATED"
+          },
+          {
+            "id": "22",
+            "name": "Natural Kraft Board",
+            "desc": " Uncoated and unbleached kraft linerboard made from a mixture of virgin and recycled paper pulp.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg"
+            ],
+            "cat": "CORRUGATED"
+          },
+          {
+            "id": "23",
+            "name": "Natural Kraft Board",
+            "desc": " Uncoated and unbleached kraft linerboard made from a mixture of virgin and recycled paper pulp.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg"
+            ],
+            "cat": "CORRUGATED"
+          },
+          {
+            "id": "24",
+            "name": "Natural Kraft Board",
+            "desc": " Uncoated and unbleached kraft linerboard made from a mixture of virgin and recycled paper pulp.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/14-brown-corrugated.jpg"
+            ],
+            "cat": "CORRUGATED"
+          }
+        ]
+      },
+      {
+        "category": "FLUTED GRADES",
+        "items": [
+          {
+            "id": "25",
+            "name": " Single Face",
+            "desc": " One corrugated fiberboard is glued to one flat sheet of the linerboard.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg"
+            ],
+            "cat": "FLUTED GRADES"
+          },
+          {
+            "id": "26",
+            "name": " Single Face",
+            "desc": " One corrugated fiberboard is glued to one flat sheet of the linerboard.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg"
+            ],
+            "cat": "FLUTED GRADES"
+          },
+          {
+            "id": "27",
+            "name": " Single Face",
+            "desc": " One corrugated fiberboard is glued to one flat sheet of the linerboard.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg"
+            ],
+            "cat": "FLUTED GRADES"
+          },
+          {
+            "id": "28",
+            "name": " Single Face",
+            "desc": " One corrugated fiberboard is glued to one flat sheet of the linerboard.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/master-material/single-face.jpg"
+            ],
+            "cat": "FLUTED GRADES"
+          }
+        ]
+      },
+      {
+        "category": "RIGID MATERIALS",
+        "items": [
+          {
+            "id": "29",
+            "name": "Grey Chipboard",
+            "desc": " Thick and sturdy chipboard made from recycled paper pulp, used to construct rigid boxes.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg"
+            ],
+            "cat": "RIGID MATERIALS"
+          },
+          {
+            "id": "30",
+            "name": "Grey Chipboard",
+            "desc": " Thick and sturdy chipboard made from recycled paper pulp, used to construct rigid boxes.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg"
+            ],
+            "cat": "RIGID MATERIALS"
+          },
+          {
+            "id": "31",
+            "name": "Grey Chipboard",
+            "desc": " Thick and sturdy chipboard made from recycled paper pulp, used to construct rigid boxes.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg"
+            ],
+            "cat": "RIGID MATERIALS"
+          },
+          {
+            "id": "32",
+            "name": "Grey Chipboard",
+            "desc": " Thick and sturdy chipboard made from recycled paper pulp, used to construct rigid boxes.",
+            "img": "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
+            "images": [
+              "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg",
+              "https://media.pakfactory.com/media_upload/coding_guide/18-chipboard.jpg"
+            ],
+            "cat": "RIGID MATERIALS"
+          }
+        ]
+      }
+]

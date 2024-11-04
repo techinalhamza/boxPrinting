@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="singleProduct.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <!-- bootstrap cdn -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <!-- google font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter&display=swap"
+    rel="stylesheet"
+  />
+    <title>singleProduct</title>
+  </head>
+  <body>
+    <header>
+      <div class="main-container">
+        <div class="header-container">
+          <!-- Logo Section -->
+          <div class="logo">
+            <a href="/">
+              <img src="images/updatedLogo2.png" alt="Logo" />
+            </a>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="header-search-bar">
+            <div class="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input
+              type="search"
+              placeholder="Search products..."
+              id="searchInput"
+            />
+          </div>
+
+          <!-- Contact Details -->
+          <div class="contact-details">
+            <div class="nav-phone">
+              <div class="phone-icon">
+                <!-- <i class="fa-solid fa-phone-volume"></i> -->
+                <img src="/images/phone-call.svg" alt="" />
+              </div>
+              <div class="nav-num">
+                <p style="font-size: 12px; color: #7a869a">
+                  Need Help? Call us
+                </p>
+                <p>(713) 893-4763</p>
+              </div>
+            </div>
+            <div class="nav-divider">|</div>
+            <div class="nav-account">
+              <div class="user-icon">
+                <i class="fa-regular fa-user"></i>
+              </div>
+              <p>My Account</p>
+            </div>
+            <div class="hamburger-menu">
+              <i id="hamburgerIcon" class="fas fa-bars"></i>
+              <div id="menu hamburgerIcon" onclick="onClickMenu()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <div class="main-container">
+      <nav class="nav-container">
+        <ul class="nav-links menu">
+          <!-- Products List Dropdown -->
+          <li class="menu-item" onmouseenter="toggleDropdown(true)" onmouseleave="toggleDropdown(false)">
+            <a href="/shop.html" class="menu-link">
+              Products List
+              <span class="dropdown-icon">&#9660;</span> <!-- Down arrow icon -->
+            </a>
+            <div class="nav-dropdown" id="productDropdown">
+              <div class="dropdown-content" id="dropdownContent"></div>
+            </div>
+          </li>
+
+          <!-- Other Links -->
+          <li><a href="#">Quote By Style</a></li>
+          <li><a href="#">Upload Your Artwork</a></li>
+          <li><a href="#">Free Design Services</a></li>
+          <li><a href="#">Sample Request</a></li>
+        </ul>
+
+        <!-- Discount Tagline -->
+        <div class="nav-discount-tagline">
+          <!-- <i class="fas fa-percentage"></i> -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6 discount-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m8.99 14.993 6-6m6 3.001c0 1.268-.63 2.39-1.593 3.069a3.746 3.746 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043 3.745 3.745 0 0 1-3.068 1.593c-1.268 0-2.39-.63-3.068-1.593a3.745 3.745 0 0 1-3.296-1.043 3.746 3.746 0 0 1-1.043-3.297 3.746 3.746 0 0 1-1.593-3.068c0-1.268.63-2.39 1.593-3.068a3.746 3.746 0 0 1 1.043-3.297 3.745 3.745 0 0 1 3.296-1.042 3.745 3.745 0 0 1 3.068-1.594c1.268 0 2.39.63 3.068 1.593a3.745 3.745 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.297 3.746 3.746 0 0 1 1.593 3.068ZM9.74 9.743h.008v.007H9.74v-.007Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm4.125 4.5h.008v.008h-.008v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+            />
+          </svg>
+
+          <p>Get 10% off when you buy 2 custom products!</p>
+        </div>
+      </nav>
+    </div>
+
+
+    <!-- single product page code start -->
+    <div class="singleProduct-container">
+      <!-- Breadcrumb -->
+      <div class="contact-us-breadcrumb">
+        <div class="listing-overlay">
+          <h1 id="productBreadcrumbname">Product Name</h1>
+        </div>
+      </div>
+
+      <!-- Product Content -->
+      <div class="main-container">
+        <div class="single-product-content">
+          <!-- Product Image Section -->
+          <div class="single-product-image">
+            <div class="large-image">
+              <img
+                src="/images/productsImages/Cosmetics & Beauty/Body & Face Lotion Boxes.png"
+                alt="Product Large"
+                id="productImage"
+              />
+            </div>
+
+            <div class="small-images">
+              <div class="small-image-box">
+                <img
+                  src="/images/productsImages/Cosmetics & Beauty/Cosmetic Jar Boxes.png"
+                  alt="Product Small 1"
+                />
+              </div>
+              <div class="small-image-box">
+                <img
+                  src="images/productsImages/Cosmetics & Beauty/Cosmetic Lip Eyeliner Boxe.png"
+                  alt="Product Small 2"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Info Section -->
+          <div class="product-info">
+            <div class="single-product-name" id="productName">Product Name</div>
+            <span class="single-product-info-rating">★★★★★</span>
+            <div class="price">$10</div>
+            <div class="short-desc" id="productDescription"></div>
+            <hr />
+            <!-- Inquiry Form (Example Placeholder) -->
+            <div class="single-product-inquiry-form">
+              <form>
+                <!-- First Row: Length, Width, Height -->
+                <div class="form-row thirds">
+                  <div class="field">
+                    <label for="length"
+                      >Length (inch) <span style="color: red">*</span></label
+                    >
+                    <input id="length" name="length" type="text" required />
+                  </div>
+                  <div class="field">
+                    <label for="width"
+                      >Width (inch) <span style="color: red">*</span></label
+                    >
+                    <input id="width" name="width" type="text" required />
+                  </div>
+                  <div class="field">
+                    <label for="height"
+                      >Height (inch) <span style="color: red">*</span></label
+                    >
+                    <input id="height" name="height" type="text" required />
+                  </div>
+                </div>
+
+                <!-- Second Row: Stock Option, Print Option, Finishing Option -->
+                <div class="form-row thirds">
+                  <div class="field">
+                    <label for="stockOption">Stock Option</label>
+                    <select id="stockOption" name="stockOption">
+                      <option value="">Select Print Option</option>
+                      <option value="Full_Color_Printing">
+                        Full Color Printing
+                      </option>
+                      <option value="1_Color_Printing">1 Color Printing</option>
+                      <option value="2_Color_Printing">2 Color Printing</option>
+                      <option value="3_Color_Printing">3 Color Printing</option>
+                      <option value="No_Printing">No Printing</option>
+                      <option value="PMS_Color_Printing">
+                        PMS Color Printing
+                      </option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="printOption">Print Option</label>
+                    <select id="printOption" name="printOption">
+                      <option value="">Select Stock Option</option>
+                      <option value="14_pt_Card_Stock">
+                        14 pt. Card Stock
+                      </option>
+                      <option value="16_pt_Card_Stock">
+                        16 pt. Card Stock
+                      </option>
+                      <option value="18_pt_Card_Stock">
+                        18 pt. Card Stock
+                      </option>
+                      <option value="24_pt_Card_Stock">
+                        24 pt. Card Stock
+                      </option>
+                      <option value="Brown_Kraft_Stock">
+                        Brown Kraft Stock
+                      </option>
+                      <option value="White_Kraft_Stock">
+                        White Kraft Stock
+                      </option>
+                      <option value="Brown_Corrugated">Brown Corrugated</option>
+                      <option value="White_Corrugated">White Corrugated</option>
+                      <option value="Texture_Stock">Texture Stock</option>
+                      <option value="Linen_Stock">Linen Stock</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="finishingOption">Finishing Option</label>
+                    <select id="finishingOption" name="finishingOption">
+                      <option value="">Select Finishing Option</option>
+                      <option value="Matte_Finish">Matte Finish</option>
+                      <option value="Spot_UV">
+                        Spot UV (Matte Surface + Glossy)
+                      </option>
+                      <option value="Aqueous_Coating">Aqueous Coating</option>
+                      <option value="Semi_Gloss_Finish">
+                        Semi Gloss Finish
+                      </option>
+                      <option value="Gold_Foiling">
+                        Gold Foiling (Glossy or Matte Finish)
+                      </option>
+                      <option value="Silver_Foiling">
+                        Silver Foiling (Glossy or Matte Finish)
+                      </option>
+                      <option value="Holographic_Foiling">
+                        Holographic Foiling (Glossy or Matte Finish)
+                      </option>
+                      <option value="Others">Others</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Third Row: Quantity, Full Name, Email -->
+                <div class="form-row thirds">
+                  <div class="field">
+                    <label for="quantity"
+                      >Quantity <span style="color: red">*</span></label
+                    >
+                    <input
+                      id="quantity"
+                      name="quantity"
+                      type="number"
+                      required
+                    />
+                  </div>
+                  <div class="field">
+                    <label for="fullName"
+                      >Full Name <span style="color: red">*</span></label
+                    >
+                    <input id="fullName" name="fullName" type="text" required />
+                  </div>
+                  <div class="field">
+                    <label for="company">Company Name</label>
+                    <input id="company" name="company" type="text" />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="field">
+                    <label for="Phone">Phone Num</label>
+                    <input id="Phone" name="Phone" type="number" />
+                  </div>
+                  <div class="field">
+                    <label for="email"
+                      >Email Address <span style="color: red">*</span></label
+                    >
+                    <input id="email" name="email" type="email" required />
+                  </div>
+                </div>
+
+                <!-- Fourth Row: Job Details (Full Width) -->
+                <div class="mb-1">
+                  <label for="jobDetails">Details</label>
+                  <textarea
+                    id="jobDetails"
+                    name="jobDetails"
+                    rows="8"
+                    placeholder="Type Your Needs Here in Details"
+                  ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                  <button type="submit" class="button-submit">
+                    Get Price Quote <i class="fas fa-angle-right"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Description Tabs -->
+        <div class="product-desc-tabs">
+          <div class="product-info-tabs" id="productInfoTabs">
+            <button class="description-btn active" data-set="Description">Description</button>
+            <button class="more-info-btn"  data-set="More Info">More Info</button>
+            <button class="tags-btn" data-set="Tags">Tags</button>
+          </div>
+
+          <!-- Description Content -->
+          <div class="description-content">
+            <p id="productLongDesc">
+              Full product description and details go here.
+            </p>
+          </div>
+          <div class="more-info">
+            <ul id="moreInfoContent"></ul>
+          </div>
+          <div class="productTags" id="productTags"></div>
+        </div>
+
+        <!-- Related Products -->
+        <div class="related-products">
+          <div class="category-title-bar">
+            <h1>Related Products</h1>
+          </div>
+          <!-- <img src="/images/productsImages/Cosmetics & Beauty/Cosmetic Lip Eyeliner Boxe.png" alt=""> -->
+
+          <div class="all-product-container">
+            <div class="product-card">
+              <img src="related-product-1.jpg" alt="Related Product 1" />
+              <h1 class="product-name">Related Product 1</h1>
+              <p>Short description of the related product.</p>
+              <div class="product-btn">
+                <span>Rating ★★★★☆</span>
+                <button>Buy Now</button>
+              </div>
+            </div>
+            <!-- Repeat similar blocks for other related products -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      // Function to get query parameters from URL
+      function getProductIdFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get("id"); // This retrieves the 'id' parameter value
+      }
+      // Function to display the selected product details
+      async function displayProductDetails() {
+        const productId = getProductIdFromURL(); // Get the product ID from the URL
+
+        if (!productId) {
+          console.error("Product ID not found in URL!");
+          return;
+        }
+
+        try {
+          // Fetch all products data
+          const response = await fetch("products.json");
+          const productsData = await response.json();
+
+          // Flatten all products into a single array to make it easier to find by ID
+          const allProducts = productsData.flatMap(
+            (category) => category.items
+          );
+
+          // Find the product with the matching ID
+          const product = allProducts.find((item) => item.id === productId);
+          // console.log(product);
+
+          if (!product) {
+            console.error("Product not found!");
+            return;
+          }
+
+          const matchingProducts = allProducts.filter(
+            (cat) => cat.cat === product.cat
+          );
+
+          if (matchingProducts.length === 0) {
+            console.log("No related products found");
+          } else {
+            renderRelatedProducts(matchingProducts); // Pass the correct variable
+          }
+                 
+          // Render product details
+          const singleProductImage = document.querySelector('.single-product-image');
+singleProductImage.innerHTML = ''; // Clear the container
+
+// Display the first image as the initial large image
+let assumeImage = `
+  <div class="large-image">
+    <img
+      src="${product.images[0]}"
+      alt="Product Large"
+      id="productImage"
+    />
+  </div>
+  <div class="small-images">
+    ${product.images.map((val) => `
+      <div class="small-image-box">
+        <img
+          src="${val}"
+          alt="Product Small"
+          class="small-image"
+        />
+      </div>
+    `).join('')}
+  </div>
+`;
+
+// Set the HTML content
+singleProductImage.innerHTML = assumeImage;
+
+// Add event listeners to each small image
+const smallImages = document.querySelectorAll('.small-image');
+const largeImage = document.getElementById('productImage');
+
+smallImages.forEach((img) => {
+  img.addEventListener('click', () => {
+    largeImage.src = img.src;
+  });
+});
+
+
+
+          document.getElementById("productBreadcrumbname").innerHTML = product.name 
+          // document.getElementById("productImage").src = product.images[0];
+          document.getElementById("productName").textContent = product.name;
+          document.getElementById("productDescription").textContent =
+            product.desc;
+          let moreInfo = product.moreInfo.map((val) => {
+            // console.log(val.finishingOptions);
+            return `${val.colors}`;
+          });
+          document.getElementById("productLongDesc").textContent =
+            product.description;
+
+          let moreInfoLi = document.getElementById("moreInfoContent");
+          moreInfoLi.innerHTML = "";
+          let cluster = "";
+          cluster = product.moreInfo.map((val) => {
+            return ` <li><b>Specification:</b> <br> <span id="Specification">${val.Specification}</span></li>
+                          <li>
+                            <b>Size / Styles:</b><br>
+                            <span
+                              id="sizeStyles:
+            "
+                            >${val.sizeStyles}</span>
+                          </li>
+                          <li><b>Color:</b><br> <span id="colors">${val.colors}</span></li>
+                          <li>
+                            <b>Finishing Options:</b><br> <span id="finishingOptions">${val.finishingOptions}</span>
+                          </li>
+                          <li><b>Production Time:</b><br> <span id="productionTime">${val.productionTime}</span></li>
+                        `;
+          });
+          moreInfoLi.innerHTML = cluster;
+          // console.log(moreInfoLi);
+
+          document.getElementById("productTags").textContent = product.tags;
+        } catch (error) {
+          console.error("Error fetching products:", error);
+        }
+      }
+
+      // Call the display function on page load
+      displayProductDetails();
+
+      const productTabs = document.getElementById("productInfoTabs");
+      const descriptionContent = document.querySelector(".description-content");
+      const moreInfo = document.querySelector(".more-info");
+      const productTags = document.getElementById("productTags");
+      productTabs.addEventListener("click", (e) => {
+        const clickedTab = e.target.dataset.set;
+        console.log(clickedTab);
+        if (clickedTab === "Description") {
+          descriptionContent.style.display = "block";
+          moreInfo.style.display = "none";
+          productTags.style.display = "none";
+          document.querySelector('.description-btn').classList.add('active')
+          document.querySelector('.more-info-btn').classList.remove('active')
+          document.querySelector('.tags-btn').classList.remove('active')
+
+        }
+        if (clickedTab === "More Info") {
+          descriptionContent.style.display = "none";
+          moreInfo.style.display = "block";
+          productTags.style.display = "none";
+          document.querySelector('.description-btn').classList.remove('active')
+          document.querySelector('.more-info-btn').classList.add('active')
+          document.querySelector('.tags-btn').classList.remove('active')
+
+        }
+        if (clickedTab === "Tags") {
+          descriptionContent.style.display = "none";
+          moreInfo.style.display = "none";
+          productTags.style.display = "block";
+          document.querySelector('.description-btn').classList.remove('active')
+
+          document.querySelector('.tags-btn').classList.add('active')
+          document.querySelector('.more-info-btn').classList.remove('active')
+
+        }
+      });
+
+      // loop related products match with category
+
+      const renderRelatedProducts = (relatedProducts) => {
+        const allProductContainer = document.querySelector(
+          ".all-product-container"
+        );
+        allProductContainer.innerHTML = ""; // Clear the container
+
+        // Get only the first 4 products
+        const cluster = relatedProducts
+          .slice(0, 4)
+          .map((val) => {
+            return `<a href="/singleproduct.html?id=${val.id}" style="color:black;">
+      <div class="product-card">
+        <img src="${val.img}" alt="Related Product 1" />
+        <h1 class="product-name">${val.name}</h1>
+        <p>${val.desc.substr(0, 50)}...</p>
+        <div class="product-btn">
+          <span>★★★★☆</span>
+          <button>Buy Now</button>
+        </div>
+      </div>
+      </a>
+    `;
+          })
+          .join("");
+
+        allProductContainer.innerHTML = cluster;
+      };
+    </script>
+  </body>
+</html>
