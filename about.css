@@ -150,4 +150,7 @@ h1.about-card-title:before {
   .about-cards {
     padding: 1rem;
   }
+  .about-card-title {
+    font-size: 2rem;
+  }
 }

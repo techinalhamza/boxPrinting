@@ -16,7 +16,9 @@
   .hamburger-menu {
     display: block;
   }
-
+  .dropdown-icon {
+    display: none;
+  }
   .nav-links {
     /* display: none !important; */
     position: fixed;
